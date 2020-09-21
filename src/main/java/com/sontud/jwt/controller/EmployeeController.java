@@ -5,8 +5,8 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin()
 public class EmployeeController {
 
-    @GetMapping(value = "/greeting")
+    @GetMapping(value = "/hello")
     public String getEmployees() {
-        return "Welcome!";
+        return "Hello Word";
     }
 }
