@@ -6,8 +6,8 @@
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
-#mvn clean
-target/
+#compile java
+/target/
 
 
 # Created by https://www.toptal.com/developers/gitignore/api/intellij,java,windows
