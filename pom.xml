@@ -6,12 +6,12 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.2.1.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
 	</parent>
-	<groupId>com.sontud</groupId>
-	<artifactId>spring-boot-jwt</artifactId>
+	<groupId>com.sontud.jwt</groupId>
+	<artifactId>springboot-test-sontud</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-boot-jwt</name>
+	<name>springboot-test-sontud</name>
 	<description>Demo SpringBoot JWT</description>
 
 	<properties>
