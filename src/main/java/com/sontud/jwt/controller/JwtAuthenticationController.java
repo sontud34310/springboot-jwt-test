@@ -1,7 +1,7 @@
 package com.sontud.jwt.controller;
 
 import com.sontud.jwt.service.JwtUserDetailsService;
-import com.sontud.jwt.config.JwtTokenUtil;
+import com.sontud.jwt.util.JwtTokenUtil;
 import com.sontud.jwt.model.JwtRequest;
 import com.sontud.jwt.model.JwtResponse;
 import com.sontud.jwt.model.UserDto;

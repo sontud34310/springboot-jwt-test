@@ -1,4 +1,4 @@
-package com.sontud.jwt.config;
+package com.sontud.jwt.util;
 
 import java.io.Serializable;
 import java.util.Date;
