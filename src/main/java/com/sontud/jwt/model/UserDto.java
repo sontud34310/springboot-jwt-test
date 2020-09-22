@@ -1,6 +1,5 @@
 package com.sontud.jwt.model;
-
-import javax.persistence.Column;
+import java.math.BigDecimal;
 
 public class UserDto {
     private String username;
@@ -9,6 +8,8 @@ public class UserDto {
     private String lName;
     private String phoneNo;
     private String address;
+    private BigDecimal salary;
+    private String memberType;
 
     public String getUsername() {
         return username;
@@ -56,5 +57,21 @@ public class UserDto {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public BigDecimal getSalary() {
+        return salary;
+    }
+
+    public void setSalary(BigDecimal salary) {
+        this.salary = salary;
+    }
+
+    public String getMemberType() {
+        return memberType;
+    }
+
+    public void setMemberType(String memberType) {
+        this.memberType = memberType;
     }
 }

@@ -50,18 +50,17 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity httpSecurity) throws Exception {
-		// We don't need CSRF for this example
+		// ปิด cross site request forgery
 		httpSecurity.csrf().disable()
-				// dont authenticate this particular request
-				.authorizeRequests().antMatchers("/authenticate", "/register").permitAll().
-				// all other requests need to be authenticated
-						anyRequest().authenticated().and().
-				// make sure we use stateless session; session won't be used to
-				// store user's state.
-						exceptionHandling().authenticationEntryPoint(jwtAuthenticationEntryPoint).and().sessionManagement()
+				// Authen และ Register สามารถยิงเข้ามาได้
+				.authorizeRequests().antMatchers("/authenticate", "/register").permitAll()
+				// รีเควสอื่นๆไม่สามารถยิงเข้ามาได้ต้อง Authen ให้ผ่านก่อน
+				.anyRequest().authenticated().and()
+				// return "Unauthorized" หาก user password ผิด หรืออื่นๆ exception จะมาเข้าตัวนี้
+				.exceptionHandling().authenticationEntryPoint(jwtAuthenticationEntryPoint).and().sessionManagement()
 				.sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
-		// Add a filter to validate the tokens with every request
+		// Validate Token ทุกๆรีเควส ที่เข้ามา
 		httpSecurity.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
 	}
 }
