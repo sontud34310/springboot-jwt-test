@@ -59,4 +59,9 @@ public class JwtUserDetailsService implements UserDetailsService {
 			}
 		return newUser;
 	}
+
+	public String helloWord(String str){
+        System.out.println("Hello Word : "+ str);
+		return str;
+	}
 }
